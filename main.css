@@ -1,0 +1,496 @@
+/* ALL PAGES */
+* {
+    margin: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+}
+
+
+.html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: 'Rockstyle';
+    src: url(fonts/RockStyle.ttf);
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/RobotoCondensed-Regular.ttf);
+}
+
+
+/* Logo+Name */
+
+header {
+    display: grid;
+    grid-template-areas: 
+        "name name menu";
+    background: #FFF2F2;
+}
+
+body {
+    background-image: url(images/background.png);
+    opacity: 0.9;
+}
+
+footer {
+    background-color: #fffafa;
+    padding-bottom: 5px;
+    padding-top: 7px;
+} 
+
+.name {
+    grid-area: name;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+}
+.title {
+    font-family: 'Rockstyle';
+    font-size: 5rem;
+    color: #423064;
+}
+.pageTitle {
+    font-family: "Rockstyle";
+    font-size: 3.5rem;
+    color: #423064;
+    padding-left: 30px;
+    padding-top: 10px;
+} 
+@media screen and (max-width: 767px) {
+    .logo {
+        width: 130px;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+    .pageTitle {
+        font-size: 2rem;
+    }
+    .name {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20%;
+        padding-left: 10%;
+    }
+}
+/* Menu */
+
+.menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+	width: fit-content;
+    margin-left: auto;
+	background: #B7A7D6;
+    border-bottom-left-radius: 10px;
+}
+
+
+.menu > li{
+	display: inline-block;
+    position: relative;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #423064;
+	font-family: 'Roboto';
+    font-size: 1.5rem;
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color: #F6D8D8;
+}
+
+/* Submenu */
+
+.submenu{
+	position: absolute;
+	background: #7D5EBB;
+	width: 120%;
+	visibility: hidden;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: white;
+	font-family: 'Roboto';
+    font-size: 1.5rem;
+	text-decoration: none;
+}
+
+.menu li:hover .submenu {
+	visibility: visible;
+	opacity: 1;
+    color: #B7A7D6;
+}
+@media screen and (max-width: 767px) {
+    
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+	    width: fit-content;
+    }
+    .menu li a {
+        font-size: 1rem;
+    }
+    .submenu {
+        position: relative;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+	    width: fit-content;
+    }
+
+    .submenu {
+        position: relative;
+        visibility: visible;
+    }
+}
+/* Footer */
+
+.social {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+}
+.social img {
+    width: 50px;
+}
+
+/* INDEX CONTENT */
+/*
+.petDisplay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+.petDisplay img{
+    width: 25rem;
+    height: 17rem;
+}
+*/
+
+.links {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    justify-content: center;
+    margin: 30px
+    ;
+}
+.recursos {
+    grid-row: 1;
+    grid-column: 1;
+}
+.about-us {
+    grid-row: 2;
+    grid-column: 3;
+}
+.playlists {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.bordesRedondeados {
+    width: 100%;
+    border-radius: 300px;
+    border-style: dotted;
+    color: #423064;
+    border-width: 4px;
+}
+@media screen and (max-width: 767px) {
+    .links { 
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+/* MASCOTAS CONTENT */
+
+.petsContent {
+    display: grid;
+    grid-template-areas: 
+        "menu pets pets pets"
+        "menu pets pets pets"
+        "menu pets pets pets";
+    
+}
+
+.petMenu {
+    grid-area: menu;
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    color: #7D5EBB;
+    margin-left: 40px;
+}
+
+a { 
+    text-decoration: none;
+}
+
+ul { 
+    list-style: none;
+}
+
+.petAge {
+    margin-left: 20px;
+}
+
+.imgMasc {
+    border-radius: 30px;
+    border-style: solid;
+    color: #423064;
+    border-width: 3px;
+    max-width: 100%;
+    height: auto;
+    width: 25rem;
+    margin-left: 50px ;
+}
+
+.petPictures {
+    grid-area: pets;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    margin: 20px;
+}
+ .petPictures h3 {
+    font-family: 'Rockstyle';
+    font-size: 2.5rem;
+    color: #423064;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .petsContent { 
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .petMenu {
+        font-size: 1rem;
+    }
+    .petPictures {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* FIRULAIS CONTENT 
+
+Revisar para armar una Tarjeta*/
+
+.firulais {
+    background-color: #B7A7D6;
+    padding: 10px;
+}
+.petProfile {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.firulaispic {
+    border-style: solid;
+    color: #423064;
+    border-width: 3px;
+    width: 35rem;
+    margin-left: 50px ;
+}
+
+.firulaisCharact {
+    font-family: "Roboto";
+    font-size: 2rem;
+    color: #423064;
+    margin-left: 10px;
+}
+
+.sendmsg { 
+    display: flex; 
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .petProfile {
+        display: flex;
+        flex-direction: column;}
+
+    .firulaispic {
+        width: 25rem;
+    } 
+}
+/* RECURSOS CONTENT */
+.recursosContent {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row: 100%;
+    align-items: center;
+    margin: 30px
+}
+
+.vetPet {
+    border-style: dotted;
+    border-radius: 300px;
+    color: #423064;
+    border-width: 4px;
+    margin: 10px;
+}
+.veterinarias {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.petshops {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.playlist {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    border: #423064;
+    border-style: dotted;
+    border-width: 3px;
+  }
+  
+.playlist iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .recursosContent { 
+    display: flex;
+    flex-direction: column;
+    margin: 10px; }
+} 
+/* ABOUT US CONTENT */
+
+.aboutUs {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-row: 50% 50%;
+    text-align: center;
+}
+
+.aboutUs-content {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.aboutUs-location {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: 2rem;
+    color:black;
+    text-align: justify;
+}
+
+.location {
+    font-family: 'Rockstyle';
+    font-size: 2rem;
+    color: #7D5EBB;
+    text-align: center;
+}
+
+.map {
+    border-radius: 50px;
+    border-style: dotted;
+    color: #423064;
+    width: 100%;
+    height: 50vh;
+}
+
+@media screen and (max-width: 767px) {
+    p {font-size: 1rem;}
+    .map {
+        width: 100%;
+    }
+}
+
+
+/* CONTACTO CONTENT */
+.contacto {
+    display: grid;
+    grid-template-areas: 
+        "contacto registro";
+    margin: 15px;
+}
+.formularioContacto {
+    grid-area: contacto;
+    font-family: 'Roboto';
+    font-size: 2rem;
+    color: black;
+    background-color: #B7A7D6;
+    padding: 15px;
+}
+.formularioRegistro {
+    grid-area: registro;
+    font-family: 'Roboto';
+    font-size: 2rem;
+    color: black;
+    background-color: #F6D8D8;
+    padding: 15px;
+}
+input  {
+    border: 2px solid #423064;
+    border-radius: 4px;
+    padding: 5px;
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+  }
+select, option {
+    border: 2px solid #423064;
+    border-radius: 4px;
+    padding: 5px;
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+    .contacto {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media screen and (max-width: 1024px) {
+    .contacto {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* ........... */

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdoptmeMeow</title>
+    <link rel="icon" type="image/x-icon" href="/images/icon.gif">
+    <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+	<!-- HEADER -->
+    <header class="header">
+        <nav class="navegacion">
+            <ul class="menu">	
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="mascotas.html">Mascotas</a>
+                        <ul class="submenu">
+                                <li> <a href= "#">Gatos</a></li>
+                                <li><a href= "#">Perros</a></li>
+                        </ul>    
+                    </li>
+                        
+                    <li><a href="recursos.html">Recursos</a></li>
+
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+
+                    <li><a href="contacto.html">Contacto</a></li>        
+                </ul>
+            </nav>
+            <div class="name">
+                <img class= "logo" src="../images/icon.gif" alt="logo">
+                <h1 class="title">AdoptmeMeow</h1>
+            </div>    
+    </header>
+
+    <div class="contacto">
+        <section class="formularioContacto">
+            <h2 class="pageTitle">Contacto</h2>
+            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="formulario-contacto-nombre">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" name="nombre" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="formulario-contacto-apellido">
+                    <label for="apellido">Apellido</label>
+                    <input id="apellido" type="text" name="apellido" placeholder="Ingresa tu apellido">
+                </div>
+                <div class="formulario-contacto-telefono">
+                    <label for="telefono">Numero de telefono</label>
+                    <input id="telefono" type="number" name="numero de telefono" placeholder="Ingresa tu numero de telefono">
+                </div>
+                <div class="formulario-contacto-fecha-nacimiento">
+                    <label for="birthday">Fecha de Nacimiento:</label>
+                    <input type="date" id="birthday" name="Fecha de nacimiento">
+                </div>
+                <div class="formulario-contacto-email">
+                    <label for="email">Correo electronico</label>
+                    <input id="email" type="text" name="email">
+                </div>
+                <div>
+                    <div>Dejanos tu consulta</div>
+                    <textarea id="consulta" name="message" rows="10" cols="30"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar Formulario">
+                </div>
+            </form>
+        </section>
+
+
+        <section class="formularioRegistro">
+            <h2 class="pageTitle">Registro</h2>
+            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="formulario-registro-nombre">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" name="nombre" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="formulario-registro-apellido">
+                    <label for="apellido">Apellido</label>
+                    <input id="apellido" type="text" name="apellido" placeholder="Ingresa tu apellido">
+                </div>
+                <div class="formulario-registro-telefono">
+                    <label for="telefono">Numero de telefono</label>
+                    <input id="telefono" type="number" name="numero de telefono" placeholder="Ingresa tu numero de telefono">
+                </div>
+                <div class="formulario-registro-fecha-nacimiento">
+                    <label for="birthday">Fecha de Nacimiento:</label>
+                    <input type="date" id="birthday" name="Fecha de nacimiento">
+                </div>
+                <div class="formulario-registro-email">
+                    <label for="email">Correo electronico</label>
+                    <input id="email" type="text" name="email">
+                </div>
+                <div>
+                    <div>Te interesa adoptar un</div>
+                    <select name="">
+                        <option value="" hidden>Selecciona una opción</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Perro">Perro</option>
+                    </select>
+                </div>
+                <div>
+                    <div>Edad</div>
+                    <select name="">
+                        <option value="" hidden>Selecciona una opción</option>
+                        <option value="Cachorro">Cachorro</option>
+                        <option value="Adulto">Adulto</option>
+                        <option value="Senior">Senior</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar Formulario">
+                </div>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <nav class="social">
+            <a href="http://www.facebook.com/"> <img src="../images/facebook.png" alt="Facebook"> </a>
+            <a href="http://www.instagram.com/"> <img src="../images/Instagram.png" alt="Instagram"> </a>
+            <a href="http://www.twitter.com/"> <img src="../images/twitter.png" alt="Twitter"> </a> 
+        </nav>
+    </footer>
+
+</body>
+</html>
