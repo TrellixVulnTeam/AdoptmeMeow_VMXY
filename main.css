@@ -179,7 +179,7 @@ footer {
 }
 
 /* INDEX CONTENT */
-/*
+/* Agregar con Bootstrap Carrousel
 .petDisplay {
     display: flex;
     flex-direction: row;
@@ -232,42 +232,32 @@ footer {
 .petsContent {
     display: grid;
     grid-template-areas: 
-        "menu pets pets pets"
-        "menu pets pets pets"
-        "menu pets pets pets";
+        "list pets pets pets"
+        "list pets pets pets"
+        "list pets pets pets";
     
 }
 
 .petMenu {
-    grid-area: menu;
+    grid-area: list;
     font-family: 'Roboto';
     font-size: 1.5rem;
     color: #7D5EBB;
     margin-left: 40px;
 }
 
-a { 
+ a { 
     text-decoration: none;
-}
+ }
 
-ul { 
+ ul { 
     list-style: none;
-}
+ }
 
-.petAge {
+ .petAge {
     margin-left: 20px;
-}
+ }
 
-.imgMasc {
-    border-radius: 30px;
-    border-style: solid;
-    color: #423064;
-    border-width: 3px;
-    max-width: 100%;
-    height: auto;
-    width: 25rem;
-    margin-left: 50px ;
-}
 
 .petPictures {
     grid-area: pets;
@@ -276,13 +266,67 @@ ul {
     flex-wrap: wrap; 
     margin: 20px;
 }
- .petPictures h3 {
-    font-family: 'Rockstyle';
-    font-size: 2.5rem;
-    color: #423064;
-    text-align: center;
-}
 
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #FFF2F2;
+    color: black;
+  }
+  
+  .flip-card-front img {
+      width: 400px;
+      height: 400px;
+      object-fit:cover;
+  }
+  
+  .flip-card-back {
+    background-color: #FFF2F2;
+    transform: rotateY(180deg);
+  }
+  .flip-card-back h1 {
+    font-family: "Rockstyle";
+    font-size: 3rem;
+    color: #423064;
+  }
+  .flip-card-back p {
+    font-family: "Roboto";
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+  }
+  .flip-card-back a {
+    font-family: "Roboto";
+    font-size: 2rem;
+    color: #423064;
+
+  }
 @media screen and (max-width: 767px) {
     .petsContent { 
         display: flex;
