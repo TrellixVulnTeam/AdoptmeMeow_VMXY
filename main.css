@@ -26,7 +26,7 @@ header {
     display: grid;
     grid-template-areas: 
         "name name menu";
-    background: #FFF2F2;
+    background-image: linear-gradient(to right, #FFF2F2, #7D5EBB) ;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
 }
 
 footer {
-    background-color: #fffafa;
+    background-image: linear-gradient(to right, #7D5EBB, #FFF2F2, #7D5EBB) ;
     padding-bottom: 5px;
     padding-top: 7px;
 } 
@@ -175,6 +175,7 @@ footer {
 }
 .social img {
     width: 50px;
+    border-radius: 30px;
 }
 
 /* INDEX CONTENT */
