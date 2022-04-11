@@ -23,9 +23,6 @@
 /* Logo+Name */
 
 header {
-    display: grid;
-    grid-template-areas: 
-        "name name menu";
     background-image: linear-gradient(to right, #FFF2F2, #7D5EBB) ;
 }
 
@@ -41,15 +38,17 @@ footer {
 } 
 
 .name {
-    grid-area: name;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
+    padding-top: 50px;
+    padding-left: 20px;
 }
 
 .logo {
     width: 200px;
+    margin-bottom: 25px;
 }
 .title {
     font-family: 'Rockstyle';
@@ -61,11 +60,12 @@ footer {
     font-size: 3.5rem;
     color: #423064;
     padding-left: 30px;
-    padding-top: 10px;
+    padding-top: 20px;
 } 
 @media screen and (max-width: 767px) {
     .logo {
         width: 130px;
+        margin: 0;
     }
     .title {
         font-size: 2.5rem;
@@ -76,95 +76,33 @@ footer {
     .name {
         display: flex;
         flex-direction: column;
-        padding-top: 20%;
-        padding-left: 10%;
+        padding: 25px;
+        margin-top: 25px;
     }
 }
 /* Menu */
 
-.menu {
-    grid-area: menu;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-	width: fit-content;
-    margin-left: auto;
-	background: #B7A7D6;
-    border-bottom-left-radius: 10px;
+.navbar {
+    background-image: linear-gradient(to right, #FFF2F2, #7D5EBB);
+    box-shadow: 2px 2px 5px #FFF2F2;
 }
 
-
-.menu > li{
-	display: inline-block;
-    position: relative;
+.navbar-toggler {
+    color: #FFF2F2 !important;
 }
 
-.menu > li > a{
-	display: block;
-	padding: 15px 20px;
-	color: #423064;
-	font-family: 'Roboto';
+.offcanvas-body {
+    background-image: linear-gradient(to right, #FFF2F2, #7D5EBB);
+}
+.nav-link  {
+    font-family: 'Roboto';
     font-size: 1.5rem;
-	text-decoration: none;
+    color: #F6D8D8 !important;
 }
-
-.menu li a:hover{
-	color: #F6D8D8;
-}
-
-/* Submenu */
-
-.submenu{
-	position: absolute;
-	background: #7D5EBB;
-	width: 120%;
-	visibility: hidden;
-}
-
-.submenu li a{
-	display: block;
-	padding: 15px;
-	color: white;
-	font-family: 'Roboto';
+.offcanvas-title {
+    font-family: 'Roboto';
     font-size: 1.5rem;
-	text-decoration: none;
-}
-
-.menu li:hover .submenu {
-	visibility: visible;
-	opacity: 1;
-    color: #B7A7D6;
-}
-@media screen and (max-width: 767px) {
-    
-    .menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-	    width: fit-content;
-    }
-    .menu li a {
-        font-size: 1rem;
-    }
-    .submenu {
-        position: relative;
-        visibility: visible;
-    }
-}
-
-@media screen and (max-width: 1023px) {
-    
-    .menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-	    width: fit-content;
-    }
-
-    .submenu {
-        position: relative;
-        visibility: visible;
-    }
+    color: #7D5EBB;
 }
 /* Footer */
 
@@ -178,18 +116,27 @@ footer {
     border-radius: 30px;
 }
 
+@media screen and (max-width: 767px) {
+    .offcanvas-body {
+        background-color: #FFF2F2;
+        background-image: none;
+    }
+    .nav-link  {
+        color: #7D5EBB !important;
+    }
+}
 /* INDEX CONTENT */
-/* Agregar con Bootstrap Carrousel
-.petDisplay {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
+
+.carousel img{
+    width: auto;
+    height: 700px;
+    object-fit:cover;
 }
-.petDisplay img{
-    width: 25rem;
-    height: 17rem;
-}
-*/
+.carousel h2, .carousel h3 {
+    font-family: 'Roboto';
+    color: #423064;
+    text-shadow: 2px 2px 5px white;
+}  
 
 .links {
     display: grid;
@@ -225,6 +172,14 @@ footer {
         flex-direction: column;
         padding: 10px;
     }
+    .carousel img {
+        height: 300px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .carousel img {
+        height: 500px;
+    }
 }
 
 /* MASCOTAS CONTENT */
@@ -244,9 +199,11 @@ footer {
     font-size: 1.5rem;
     color: #7D5EBB;
     margin-left: 40px;
+    
 }
 
  a { 
+    color: #7D5EBB;
     text-decoration: none;
  }
 
@@ -255,7 +212,7 @@ footer {
  }
 
  .petAge {
-    margin-left: 20px;
+    margin-left: 10px;
  }
 
 
@@ -272,6 +229,8 @@ footer {
     width: 400px;
     height: 400px;
     perspective: 1000px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #7D5EBB;
   }
   
   .flip-card-inner {
@@ -309,6 +268,7 @@ footer {
   .flip-card-back {
     background-color: #FFF2F2;
     transform: rotateY(180deg);
+
   }
   .flip-card-back h1 {
     font-family: "Rockstyle";
@@ -339,6 +299,15 @@ footer {
     .petPictures {
         display: flex;
         flex-direction: column;
+    }
+    .flip-card {
+        margin: 5px;
+        width: 300px;
+        height: 300px;
+    }
+    .flip-card-front img {
+        width: 300px;
+        height: 300px;
     }
 }
 /* FIRULAIS CONTENT 
@@ -389,10 +358,11 @@ Revisar para armar una Tarjeta*/
 /* RECURSOS CONTENT */
 .recursosContent {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+        "veterinarias petshops";
     grid-row: 100%;
     align-items: center;
-    margin: 30px
+    justify-items: center;
 }
 
 .vetPet {
@@ -400,16 +370,15 @@ Revisar para armar una Tarjeta*/
     border-radius: 300px;
     color: #423064;
     border-width: 4px;
-    margin: 10px;
+    margin: 30px;
 }
+
 .veterinarias {
-    grid-column: 1;
-    grid-row: 1;
+    grid-area: veterinarias;
 }
 
 .petshops {
-    grid-column: 2;
-    grid-row: 1;
+    grid-area: petshops;
 }
 
 .playlist {
@@ -494,36 +463,29 @@ p {
         "contacto registro";
     margin: 15px;
 }
+.contacto .row {
+    padding: 5px;
+    align-items: center;
+}
+
 .formularioContacto {
     grid-area: contacto;
     font-family: 'Roboto';
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: black;
     background-color: #B7A7D6;
-    padding: 15px;
+    padding: 10px;
 }
+
 .formularioRegistro {
     grid-area: registro;
     font-family: 'Roboto';
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: black;
     background-color: #F6D8D8;
-    padding: 15px;
+    padding: 10px;
 }
-input  {
-    border: 2px solid #423064;
-    border-radius: 4px;
-    padding: 5px;
-    font-family: 'Roboto';
-    font-size: 1.5rem;
-  }
-select, option {
-    border: 2px solid #423064;
-    border-radius: 4px;
-    padding: 5px;
-    font-family: 'Roboto';
-    font-size: 1.5rem;
-}
+
 
 @media screen and (max-width: 767px) {
     .contacto {
