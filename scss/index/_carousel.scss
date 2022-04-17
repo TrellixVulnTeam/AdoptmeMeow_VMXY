@@ -1,0 +1,21 @@
+.carousel {
+    img {
+        width: auto;
+        height: 700px;
+        object-fit:cover; 
+    }
+    h2 {
+        font-family: $fuente-secundaria;
+        color: $Morado;
+        text-shadow: 2px 2px 5px white;
+            &:hover {
+                color: $Lila;
+            }
+    }
+    h3 {
+        font-family: $fuente-secundaria;
+        color: $Morado;
+        text-shadow: 2px 2px 5px white;
+    }
+}
+

@@ -1,0 +1,26 @@
+.contacto {
+    display: grid;
+    grid-template-areas: 
+        "contacto registro";
+    margin: 15px;
+        .row {
+            padding: 5px;
+            align-items: center;
+        }
+        .formularioContacto {
+            grid-area: contacto;
+            font-family: $fuente-secundaria;
+            font-size: 1.2rem;
+            color: black;
+            background-color: $Lila;
+            padding: 10px;
+        }
+        .formularioRegistro {
+            grid-area: registro;
+            font-family: $fuente-secundaria;
+            font-size: 1.2rem;
+            color: black;
+            background-color: $Rosa;
+            padding: 10px;
+        }
+}

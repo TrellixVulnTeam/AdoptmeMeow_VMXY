@@ -1,0 +1,92 @@
+.petsContent {
+    display: grid;
+    grid-template-areas: 
+        "list pets pets pets"
+        "list pets pets pets"
+        "list pets pets pets";
+            .petMenu {
+                grid-area: list;
+                font-family: $fuente-secundaria;
+                font-size: 1.5rem;
+                color: $Lila;
+                margin-left: 40px;
+                    .petAge {
+                        margin-left: 10px;
+                    }        
+            }
+            ul { 
+                list-style: none;
+                    a { 
+                        color: $Lila;
+                        text-decoration: none;
+                    }
+            }
+   
+            .petPictures {
+                grid-area: pets;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap; 
+                margin: 20px;
+
+                    .flip-card {
+                        background-color: transparent;
+                        width: 400px;
+                        height: 400px;
+                        perspective: 1000px;
+                        margin: 10px;
+                        box-shadow: 5px 5px 5px $Lila;
+
+                            .flip-card-inner {
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                text-align: center;
+                                transition: transform 0.6s;
+                                transform-style: preserve-3d;
+                                    &:hover {
+                                        transform: rotateY(180deg);
+                                    }
+                            }
+                        
+                            .flip-card-front, .flip-card-back {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                -webkit-backface-visibility: hidden;
+                                backface-visibility: hidden;
+                            }
+                              
+                            .flip-card-front {
+                                background-color: $Rosa-Pastel;
+                                color: black;
+                                    img {
+                                        width: 400px;
+                                        height: 400px;
+                                        object-fit:cover;
+                                    }
+                            }
+
+                            .flip-card-back {
+                                background-color: $Rosa-Pastel;
+                                transform: rotateY(180deg);
+                                    h1 {
+                                        font-family: $fuente-titulos;
+                                        font-size: 3rem;
+                                        color: $Morado;
+                                    }
+                                    p {
+                                        font-family: $fuente-secundaria;
+                                        font-size: 2rem;
+                                        color: black;
+                                        text-align: center;
+                                    }
+                                    a {
+                                        font-family: $fuente-secundaria;
+                                        font-size: 2rem;
+                                        color: $Morado;
+                                    }
+                            }
+                    }
+            }
+}

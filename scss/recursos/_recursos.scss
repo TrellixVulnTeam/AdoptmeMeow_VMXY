@@ -1,0 +1,40 @@
+.recursosContent {
+    display: grid;
+    grid-template-areas: 
+        "veterinarias petshops";
+    grid-row: 100%;
+    align-items: center;
+    justify-items: center;
+        .vetPet {
+            border-style: dotted;
+            border-radius: 300px;
+            color: $Morado;
+            border-width: 4px;
+            margin: 30px;
+        }
+        .veterinarias {
+            grid-area: veterinarias;
+        }
+        .petshops {
+            grid-area: petshops;
+        }
+}
+
+.playlist {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    border: $Morado;
+    border-style: dotted;
+    border-width: 3px;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+}

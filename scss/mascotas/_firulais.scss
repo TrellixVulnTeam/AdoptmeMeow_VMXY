@@ -1,0 +1,34 @@
+.firulais {
+    background-color: $Lila;
+    padding: 10px;
+        .petProfile {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+                .firulaispic {
+                    border-style: solid;
+                    color: $Morado;
+                    border-width: 3px;
+                    width: 35rem;
+                    margin-left: 50px ;
+                }
+                .firulaisCharact {
+                    font-family: $fuente-secundaria;
+                    font-size: 2rem;
+                    color: $Morado;
+                    margin-left: 10px;
+                }               
+        }
+        .sendmsg { 
+            display: flex; 
+            flex-direction: row;
+            justify-content: end;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+}
+
+
+
+
+

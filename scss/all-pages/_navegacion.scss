@@ -1,0 +1,23 @@
+.navbar {
+    background-image: linear-gradient(to right, $Rosa-Pastel, $Lila);
+    box-shadow: 2px 2px 5px $Rosa-Pastel;
+        .navbar-toggler {
+            color: $Rosa-Pastel !important;
+        }
+        .offcanvas-body {
+            background-image: linear-gradient(to right, $Rosa-Pastel, $Lila);
+        }
+        .nav-link  {
+            font-family: $fuente-secundaria;
+            font-size: 1.5rem;
+            color: $Rosa-Pastel !important;
+                &:hover {
+                    color: $Rosa !important; 
+                }
+        }
+        .offcanvas-title {
+            font-family: $fuente-secundaria;
+            font-size: 1.5rem;
+            color: $Lila;
+        }
+    }
