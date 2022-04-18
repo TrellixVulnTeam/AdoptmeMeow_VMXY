@@ -138,9 +138,7 @@ header {
 
 .petsContent {
   display: grid;
-  grid-template-areas: "list pets pets pets"
- "list pets pets pets"
- "list pets pets pets"; }
+  grid-template-areas: "list pets pets pets" "list pets pets pets" "list pets pets pets"; }
   .petsContent .petMenu {
     grid-area: list;
     font-family: "Roboto";
