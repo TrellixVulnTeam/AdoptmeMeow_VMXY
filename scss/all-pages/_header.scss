@@ -1,12 +1,11 @@
 header {
-    background-image: linear-gradient(to right, $Rosa-Pastel, $Lila) ;
+    background-image: linear-gradient(to right, $Rosa, $Lila) ;
 }
 
+
 .name {
-    display: flex;
-    flex-direction: row;
+    @include flex-row-center;
     justify-content: start;
-    align-items: center;
     padding-top: 50px;
     padding-left: 20px;
 
@@ -22,10 +21,11 @@ header {
         }
 }
 
+
 .pageTitle {
-    font-family: $fuente-titulos;
-    font-size: 3.5rem;
-    color: $Morado;
+    font-family: map-get($map: $pagetitle, $key: Fuente );
+    font-size: map-get($map: $pagetitle, $key: Tfuente );
+    color: map-get($map: $pagetitle, $key: color);
     padding-left: 30px;
     padding-top: 20px;
 } 

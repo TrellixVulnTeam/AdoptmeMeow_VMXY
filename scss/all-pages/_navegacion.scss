@@ -1,11 +1,11 @@
 .navbar {
-    background-image: linear-gradient(to right, $Rosa-Pastel, $Lila);
+    background-image: linear-gradient(to right, $Rosa, $Lila);
     box-shadow: 2px 2px 5px $Rosa-Pastel;
         .navbar-toggler {
-            color: $Rosa-Pastel !important;
+            color: $Rosa !important;
         }
         .offcanvas-body {
-            background-image: linear-gradient(to right, $Rosa-Pastel, $Lila);
+            background-image: linear-gradient(to right, $Rosa, $Lila);
         }
         .nav-link  {
             font-family: $fuente-secundaria;

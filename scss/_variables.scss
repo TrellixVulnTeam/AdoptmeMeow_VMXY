@@ -5,3 +5,29 @@ $Morado: #423064;
 $Lila: #8a72b9;
 $Rosa: #F6D8D8;
 $Rosa-Pastel: #FFF2F2;
+$Celeste:#55acee;
+$Azul:#3a5795;
+$CasiBlanco: #f7f1f8;
+
+
+/*MAP-GET*/
+
+$pagetitle: (
+    Fuente: $fuente-titulos,
+    Tfuente: 3.5rem,
+    color: $Morado,
+);
+
+
+/* MAP Footer */
+$colors: (
+ twitter: $Celeste,
+ facebook: $Azul,
+ instagram: $CasiBlanco,
+);
+
+@mixin flex-row-center {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+}
