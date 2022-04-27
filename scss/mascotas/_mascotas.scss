@@ -27,6 +27,7 @@
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap; 
+                justify-content: space-evenly;
                 margin: 20px;
 
                     .flip-card {
@@ -70,6 +71,7 @@
                             .flip-card-back {
                                 background-color: $Rosa-Pastel;
                                 transform: rotateY(180deg);
+                                padding: 20px;
                                     h1 {
                                         font-family: $fuente-titulos;
                                         font-size: 3rem;
@@ -77,16 +79,43 @@
                                     }
                                     p {
                                         font-family: $fuente-secundaria;
-                                        font-size: 2rem;
+                                        font-size: 1.5rem;
                                         color: black;
                                         text-align: center;
                                     }
-                                    a {
-                                        font-family: $fuente-secundaria;
-                                        font-size: 2rem;
+
+                                    button {
+                                        padding: 1.3em 3em;
+                                        font-size: 12px;
+                                        text-transform: uppercase;
+                                        letter-spacing: 2.5px;
+                                        font-weight: 500;
                                         color: $Morado;
-                                    }
+                                        background-color: $Rosa-Pastel;
+                                        border: none;
+                                        border-radius: 45px;
+                                        box-shadow: 0px 8px 15px $Lila;
+                                        transition: all 0.3s ease 0s;
+                                        cursor: pointer;
+                                        outline: none;
+                                            &:hover {
+                                                background-color: $Lila;
+                                                box-shadow: 0px 15px 20px $Morado;
+                                                color: $Lila;
+                                                transform: translateY(-7px);
+                                            }
+                                            &:active {
+                                                transform: translateY(-1px);
+                                            }
+                                            a {
+                                                text-decoration: none;
+                                                color: $Morado;
+                                                    &:hover {
+                                                        color: $Rosa-Pastel;
+                                                    }
+                                            }
                             }
                     }
             }
-}
+        }
+    }

@@ -4,8 +4,9 @@ header {
 
 
 .name {
-    @include flex-row-center;
-    justify-content: start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding-top: 50px;
     padding-left: 20px;
 

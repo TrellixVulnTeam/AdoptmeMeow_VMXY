@@ -1,26 +1,29 @@
 .links {
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
-    grid-template-rows: 33.3% 33.3% 33.3%;
-    justify-content: center;
+    grid-template-areas: 
+     "recursos about-us playlists";
+    align-items: center;
+    justify-items: center;
     margin: 30px;
         .recursos {
-            grid-row: 1;
-            grid-column: 1;
+            grid-area: recursos;
         }
         .about-us {
-            grid-row: 2;
-            grid-column: 3;
+            grid-area: about-us;
         }
         .playlists {
-            grid-row: 3;
-            grid-column: 2;
+            grid-area: playlists;
         }
         .bordesRedondeados {
-            width: 100%;
+            width: 80%;
             border-radius: 300px;
             border-style: dotted;
             color: $Morado;
-            border-width: 4px;        
+            border-width: 4px; 
+            transition: all 0.3s ease 0s;
+                &:hover {
+                    transform: translateY(-7px);
+                    box-shadow: 0px 8px 15px $Lila;
+                }       
         }
 }

@@ -80,8 +80,7 @@ header {
 .name {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  justify-content: start;
+  align-items: center;
   padding-top: 50px;
   padding-left: 20px; }
   .name .logo {
@@ -181,25 +180,26 @@ header {
 
 .links {
   display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
-  grid-template-rows: 33.3% 33.3% 33.3%;
-  justify-content: center;
+  grid-template-areas: "recursos about-us playlists";
+  align-items: center;
+  justify-items: center;
   margin: 30px; }
   .links .recursos {
-    grid-row: 1;
-    grid-column: 1; }
+    grid-area: recursos; }
   .links .about-us {
-    grid-row: 2;
-    grid-column: 3; }
+    grid-area: about-us; }
   .links .playlists {
-    grid-row: 3;
-    grid-column: 2; }
+    grid-area: playlists; }
   .links .bordesRedondeados {
-    width: 100%;
+    width: 80%;
     border-radius: 300px;
     border-style: dotted;
     color: #423064;
-    border-width: 4px; }
+    border-width: 4px;
+    transition: all 0.3s ease 0s; }
+    .links .bordesRedondeados:hover {
+      transform: translateY(-7px);
+      box-shadow: 0px 8px 15px #8a72b9; }
 
 .petsContent {
   display: grid;
@@ -222,6 +222,7 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: 20px; }
     .petsContent .petPictures .flip-card {
       background-color: transparent;
@@ -254,20 +255,43 @@ header {
           object-fit: cover; }
       .petsContent .petPictures .flip-card .flip-card-back {
         background-color: #FFF2F2;
-        transform: rotateY(180deg); }
+        transform: rotateY(180deg);
+        padding: 20px; }
         .petsContent .petPictures .flip-card .flip-card-back h1 {
           font-family: "Rockstyle";
           font-size: 3rem;
           color: #423064; }
         .petsContent .petPictures .flip-card .flip-card-back p {
           font-family: "Roboto";
-          font-size: 2rem;
+          font-size: 1.5rem;
           color: black;
           text-align: center; }
-        .petsContent .petPictures .flip-card .flip-card-back a {
-          font-family: "Roboto";
-          font-size: 2rem;
-          color: #423064; }
+        .petsContent .petPictures .flip-card .flip-card-back button {
+          padding: 1.3em 3em;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 2.5px;
+          font-weight: 500;
+          color: #423064;
+          background-color: #FFF2F2;
+          border: none;
+          border-radius: 45px;
+          box-shadow: 0px 8px 15px #8a72b9;
+          transition: all 0.3s ease 0s;
+          cursor: pointer;
+          outline: none; }
+          .petsContent .petPictures .flip-card .flip-card-back button:hover {
+            background-color: #8a72b9;
+            box-shadow: 0px 15px 20px #423064;
+            color: #8a72b9;
+            transform: translateY(-7px); }
+          .petsContent .petPictures .flip-card .flip-card-back button:active {
+            transform: translateY(-1px); }
+          .petsContent .petPictures .flip-card .flip-card-back button a {
+            text-decoration: none;
+            color: #423064; }
+            .petsContent .petPictures .flip-card .flip-card-back button a:hover {
+              color: #FFF2F2; }
 
 .firulais {
   background-color: #FFF2F2;
@@ -326,7 +350,11 @@ header {
     border-radius: 300px;
     color: #423064;
     border-width: 4px;
-    margin: 30px; }
+    margin: 30px;
+    transition: all 0.3s ease 0s; }
+    .recursosContent .vetPet:hover {
+      transform: translateY(-7px);
+      box-shadow: 0px 8px 15px #8a72b9; }
   .recursosContent .veterinarias {
     grid-area: veterinarias; }
   .recursosContent .petshops {
@@ -409,7 +437,11 @@ header {
 
 @media screen and (max-width: 1024px) {
   .carousel img {
-    height: 500px; } }
+    height: 500px; }
+  .links {
+    display: flex;
+    flex-direction: column;
+    padding: 10px; } }
 
 /* MASCOTAS */
 @media screen and (max-width: 767px) {

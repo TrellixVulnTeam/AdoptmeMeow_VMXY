@@ -11,6 +11,11 @@
             color: $Morado;
             border-width: 4px;
             margin: 30px;
+            transition: all 0.3s ease 0s;
+                &:hover {
+                    transform: translateY(-7px);
+                    box-shadow: 0px 8px 15px $Lila;
+                }
         }
         .veterinarias {
             grid-area: veterinarias;
