@@ -1,4 +1,7 @@
 footer {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
     background-image: linear-gradient(to right, $Lila, $Rosa, $Lila) ;
     padding-bottom: 5px;
     padding-top: 7px;

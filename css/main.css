@@ -7,6 +7,7 @@ body {
 
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box; }
 
 .html {
@@ -21,6 +22,9 @@ body {
   src: url(../fonts/RobotoCondensed-Regular.ttf); }
 
 footer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
   background-image: linear-gradient(to right, #8a72b9, #F6D8D8, #8a72b9);
   padding-bottom: 5px;
   padding-top: 7px; }
@@ -122,7 +126,8 @@ header {
   display: grid;
   grid-template-areas: "contacto registro";
   margin: 25px;
-  gap: 25px; }
+  gap: 25px;
+  height: 450px; }
   .contacto .row {
     padding: 5px;
     align-items: center;
@@ -142,6 +147,7 @@ header {
     background-color: #F6D8D8;
     padding: 10px; }
   .contacto button {
+    margin-top: 30px;
     padding: 1.3em 3em;
     font-size: 12px;
     text-transform: uppercase;
@@ -478,13 +484,13 @@ header {
   .recursosContent {
     display: flex;
     flex-direction: column;
-    margin: 10px; } }
+    margin: 50px; } }
 
 @media screen and (max-width: 1024px) {
   .recursosContent {
     display: flex;
     flex-direction: column;
-    margin: 10px; } }
+    margin: 50px; } }
 
 /* SOBRE NOSOTROS */
 @media screen and (max-width: 767px) {
