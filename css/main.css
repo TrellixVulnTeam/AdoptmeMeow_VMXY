@@ -90,6 +90,8 @@ header {
     font-family: "Rockstyle";
     font-size: 5rem;
     color: #423064; }
+  .name a {
+    text-decoration: none; }
 
 .pageTitle {
   font-family: "Rockstyle";
