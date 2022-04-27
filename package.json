@@ -1,7 +1,7 @@
 {
-  "name": "mi_repositorio",
+  "name": "AdoptmeMeow",
   "version": "1.0.0",
-  "description": "",
+  "description": "Somos una web sin fines de lucro dedicada a promover la adopcion de mascotas. Establecemos el contacto entre adoptante y rescatista para conseguir un hogar a mascotas de todas las edades.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/PaoGM/AdoptmeMeow.git"
   },
-  "author": "",
+  "author": "Gonzalez Malica Noelia Paola",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PaoGM/AdoptmeMeow/issues"
