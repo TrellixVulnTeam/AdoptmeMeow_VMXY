@@ -46,7 +46,7 @@
     .links { 
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        gap: 20px
     }
 }
 @media screen and (max-width: 1024px) {
@@ -58,7 +58,7 @@
     .links { 
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        gap: 20px
     }
 }
 
@@ -67,13 +67,14 @@
     .petsContent { 
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        margin: 20px;
             .petMenu {
                 font-size: 1rem;
             }
             .petPictures {
                 display: flex;
                 flex-direction: column;
+                align-content: center;
                     .flip-card {
                         margin: 5px;
                         width: 300px;
@@ -113,6 +114,13 @@
     }
 } 
 
+@media screen and (max-width: 1024px) {
+    .recursosContent { 
+        display: flex;
+        flex-direction: column;
+        margin: 10px; 
+        }
+}
 /* SOBRE NOSOTROS */ 
 
 @media screen and (max-width: 767px) {

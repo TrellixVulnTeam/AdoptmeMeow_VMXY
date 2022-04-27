@@ -165,7 +165,7 @@ header {
 
 .carousel img {
   width: auto;
-  height: 700px;
+  height: 600px;
   object-fit: cover; }
 
 .carousel h2 {
@@ -182,18 +182,18 @@ header {
 
 .links {
   display: grid;
-  grid-template-areas: "recursos about-us playlists";
+  grid-template-columns: 10% 20% 10% 20% 10% 20% 10%;
+  text-align: center;
   align-items: center;
-  justify-items: center;
-  margin: 30px; }
+  margin: 50px; }
   .links .recursos {
-    grid-area: recursos; }
+    grid-column: 2; }
   .links .about-us {
-    grid-area: about-us; }
+    grid-column: 4; }
   .links .playlists {
-    grid-area: playlists; }
+    grid-column: 6; }
   .links .bordesRedondeados {
-    width: 80%;
+    width: 100%;
     border-radius: 300px;
     border-style: dotted;
     color: #423064;
@@ -435,7 +435,7 @@ header {
   .links {
     display: flex;
     flex-direction: column;
-    padding: 10px; } }
+    gap: 20px; } }
 
 @media screen and (max-width: 1024px) {
   .carousel img {
@@ -443,19 +443,20 @@ header {
   .links {
     display: flex;
     flex-direction: column;
-    padding: 10px; } }
+    gap: 20px; } }
 
 /* MASCOTAS */
 @media screen and (max-width: 767px) {
   .petsContent {
     display: flex;
     flex-direction: column;
-    padding: 10px; }
+    margin: 20px; }
     .petsContent .petMenu {
       font-size: 1rem; }
     .petsContent .petPictures {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      align-content: center; }
       .petsContent .petPictures .flip-card {
         margin: 5px;
         width: 300px;
@@ -474,6 +475,12 @@ header {
 
 /* RECURSOS */
 @media screen and (max-width: 767px) {
+  .recursosContent {
+    display: flex;
+    flex-direction: column;
+    margin: 10px; } }
+
+@media screen and (max-width: 1024px) {
   .recursosContent {
     display: flex;
     flex-direction: column;
