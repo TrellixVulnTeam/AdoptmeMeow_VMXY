@@ -125,8 +125,8 @@ header {
 .contacto {
   display: grid;
   grid-template-areas: "contacto registro";
-  margin: 25px;
-  gap: 25px;
+  margin: 40px;
+  gap: 40px;
   height: 500px; }
   .contacto .row {
     padding: 5px;
@@ -217,27 +217,34 @@ header {
     font-family: "Roboto";
     font-size: 1.5rem;
     color: #8a72b9;
-    margin-left: 40px; }
-    .petsContent .petMenu .petAge {
-      margin-left: 10px; }
-  .petsContent ul {
-    list-style: none; }
-    .petsContent ul a {
+    list-style: none;
+    padding: 10px;
+    margin-left: 20px;
+    height: 100vh;
+    background-color: #FFF2F2; }
+    .petsContent .petMenu a {
       color: #8a72b9;
       text-decoration: none; }
+      .petsContent .petMenu a:hover {
+        color: #423064;
+        text-shadow: 0px 8px 15px #8a72b9; }
+  .petsContent .petAge {
+    margin-left: 10px;
+    list-style: none; }
   .petsContent .petPictures {
     grid-area: pets;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 20px; }
+    margin: 20px;
+    padding-top: 20px; }
     .petsContent .petPictures .flip-card {
       background-color: transparent;
       width: 400px;
       height: 400px;
       perspective: 1000px;
-      margin: 10px;
+      margin: 2px;
       box-shadow: 5px 5px 5px #8a72b9; }
       .petsContent .petPictures .flip-card .flip-card-inner {
         position: relative;
@@ -435,6 +442,10 @@ header {
   .pageTitle {
     font-size: 2.5rem; } }
 
+@media screen and (max-width: 1024px) {
+  .pageTitle {
+    font-size: 3rem; } }
+
 /* INDEX */
 @media screen and (max-width: 767px) {
   .carousel img {
@@ -459,7 +470,8 @@ header {
     flex-direction: column;
     margin: 20px; }
     .petsContent .petMenu {
-      font-size: 1rem; }
+      font-size: 1rem;
+      height: fit-content; }
     .petsContent .petPictures {
       display: flex;
       flex-direction: column;
@@ -471,6 +483,12 @@ header {
         .petsContent .petPictures .flip-card .flip-card-front img {
           width: 300px;
           height: 300px; } }
+
+@media screen and (max-width: 1024px) {
+  .petsContent .petMenu {
+    height: fit-content; }
+  .petsContent .petPictures .flip-card {
+    margin: 5px; } }
 
 /* PERFIL MASCOTA */
 @media screen and (max-width: 767px) {
@@ -496,14 +514,14 @@ header {
 @media screen and (max-width: 767px) {
   .recursosContent {
     display: flex;
-    flex-direction: column;
-    margin: 50px; } }
+    flex-direction: column; }
+    .recursosContent .vetPet {
+      width: 85%; } }
 
 @media screen and (max-width: 1024px) {
   .recursosContent {
     display: flex;
-    flex-direction: column;
-    margin: 50px; } }
+    flex-direction: column; } }
 
 /* SOBRE NOSOTROS */
 @media screen and (max-width: 767px) {
@@ -522,9 +540,13 @@ header {
 @media screen and (max-width: 767px) {
   .contacto {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column;
+    height: fit-content;
+    margin: 20px; } }
 
 @media screen and (max-width: 1024px) {
   .contacto {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column;
+    height: fit-content;
+    margin: 20px; } }

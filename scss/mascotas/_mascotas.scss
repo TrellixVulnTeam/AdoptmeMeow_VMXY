@@ -9,19 +9,26 @@
                 font-family: $fuente-secundaria;
                 font-size: 1.5rem;
                 color: $Lila;
-                margin-left: 40px;
-                    .petAge {
-                        margin-left: 10px;
-                    }        
-            }
-            ul { 
                 list-style: none;
-                    a { 
+                padding: 10px;
+                margin-left: 20px;
+                height: 100vh;
+                background-color: $Rosa-Pastel;
+                    a {
                         color: $Lila;
                         text-decoration: none;
-                    }
+                         &:hover {
+                             color: $Morado;
+                             text-shadow: 0px 8px 15px $Lila;
+                            }
+                        } 
             }
-   
+                    
+            .petAge {
+                margin-left: 10px;
+                list-style: none;
+            }        
+        
             .petPictures {
                 grid-area: pets;
                 display: flex;
@@ -29,13 +36,13 @@
                 flex-wrap: wrap; 
                 justify-content: space-evenly;
                 margin: 20px;
-
+                padding-top: 20px;
                     .flip-card {
                         background-color: transparent;
                         width: 400px;
                         height: 400px;
                         perspective: 1000px;
-                        margin: 10px;
+                        margin: 2px;
                         box-shadow: 5px 5px 5px $Lila;
 
                             .flip-card-inner {
